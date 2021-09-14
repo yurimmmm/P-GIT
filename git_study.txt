@@ -32,3 +32,30 @@ GIT 사용
 					새로운 commit을 생성해 기존의 commit내역에 추가한다.
 * <commit 지점>은 git log 조회했을 때 나오는 id값 ( insert키로 복붙해서 쓰면 됨)>
 
+7. 원격 리포지토리 추가 및 push/pull 하기
+	git remote add origin 리포지토리주소
+	git pull --allow-unrelated-histories origin main 
+		*원격리포지토리에서 처음 pull할 때 만
+	git push -u origin main
+		* -u : push 할 기본 원격저장소와 브랜치를 기억하는 옵션. 
+			그 후로는 push할 때 원격저장소와 브랜치 작성할 필요 없다.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
