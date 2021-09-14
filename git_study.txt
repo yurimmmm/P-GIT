@@ -2,14 +2,30 @@ GIT 사용
 1. 계정 정보 등록 
 	git config --global user.name '사용자이름'		--> yurimmmm
 	git config --global user.name '사용자이메일'		-->lyrmt0320@naver.com
+
 2. git_prac 폴더를 git이 관리하는 폴더로 지정
 	git으로 관리할 폴더로 이동		--> cd /c/CODE/git_prac
 	git init		--> 폴더 지정되고, '.git'파일 생겼는지 확인 (숨김처리돼있음)
+
 3. 기본으로 생성되는 master 브랜치를 main브랜치로 변경
 	git checkout -b main : main 브랜치를 생성하고 해당 브랜치로 이동
 	git branch -M main : 기본 브랜치를 main브랜치로 지정
 	git status : 상태확인
+
 4. 파일을 생성하고 add, commit 하기
 	git add 파일명 : git staging area 추가
 	git commit : commit에 대한 메세지를 남기기 위해 vi에디터 실행 
 		vi에디터 --> i : 입력모드, esc : 입력모드에서 나오기, wq : 저장종료
+	git commit -m 'message' : commit을 하고 commit에 대한 간단한 메세지를 남긴다.
+	commit 내역은 git log를 통해 확인할 수 있음
+
+5.변경 내역을 되돌리기 ( 파일을 마지막 commit 지점으로 되돌리기)
+	git restore 파일명 : 마지막 commit 지점으로 파일을 rollback
+	git restore --staged 파일명  : staging area에 등록된 파일을 취소 (unstaged 상태로 변경)
+
+6. 파일을 원하는 commit 지점으로 되돌리기
+	git reset --soft <commit지점> : commit 내역으로 되돌리고 commit만 취소 
+					( staging area에 파일이 남아있다.) -> add 후의 상태 되돌림
+	git reset --mixed <commit지점> : commit 내역을 되돌리고 staging까지 취소 -> add 전의 상태 되돌림
+	git reset --hard <commit지점> : commit 내역을 되돌리고 파일을 원하는 commit 지점으로 rollback
+* <commit 지점은 git log 조회했을 때 나오는 id값 ( insert키로 복붙해서 쓰면 됨)>
