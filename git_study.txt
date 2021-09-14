@@ -1,0 +1,11 @@
+GIT 사용
+1. 계정 정보 등록 
+	git config --global user.name '사용자이름'		--> yurimmmm
+	git config --global user.name '사용자이메일'		-->lyrmt0320@naver.com
+2. git_prac 폴더를 git이 관리하는 폴더로 지정
+	git으로 관리할 폴더로 이동		--> cd /c/CODE/git_prac
+	git init		--> 폴더 지정되고, '.git'파일 생겼는지 확인 (숨김처리돼있음)
+3. 기본으로 생성되는 master 브랜치를 main브랜치로 변경
+	git checkout -b main : main 브랜치를 생성하고 해당 브랜치로 이동
+	git branch -M main : 기본 브랜치를 main브랜치로 지정
+	git status : 상태확인
