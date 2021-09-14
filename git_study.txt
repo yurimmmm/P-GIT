@@ -28,4 +28,7 @@ GIT 사용
 					( staging area에 파일이 남아있다.) -> add 후의 상태 되돌림
 	git reset --mixed <commit지점> : commit 내역을 되돌리고 staging까지 취소 -> add 전의 상태 되돌림
 	git reset --hard <commit지점> : commit 내역을 되돌리고 파일을 원하는 commit 지점으로 rollback
-* <commit 지점은 git log 조회했을 때 나오는 id값 ( insert키로 복붙해서 쓰면 됨)>
+	git reset --revert <commit지점> : 지정된 commit으로 인해 발생한 변경을 되돌린다.
+					새로운 commit을 생성해 기존의 commit내역에 추가한다.
+* <commit 지점>은 git log 조회했을 때 나오는 id값 ( insert키로 복붙해서 쓰면 됨)>
+
