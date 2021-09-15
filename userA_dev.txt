@@ -5,3 +5,5 @@ userA가 DEV 브랜치에서 작업중인 내용
 카카오 API postman 테스트
 MemberController 141번 라인
 카카오개발 완료
+
+브랜치 테스트 완료
